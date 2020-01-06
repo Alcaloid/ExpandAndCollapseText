@@ -6,7 +6,7 @@
     android:layout_marginTop="10dp"
     android:orientation="vertical">
 
-    <com.codemobile.rcvcollab.ExpandAndCollapseText
+    <com.codemobile.rcvcollab.newexpandtext.ExpandAndCollapseText
         android:id="@+id/txt_expand_collapse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

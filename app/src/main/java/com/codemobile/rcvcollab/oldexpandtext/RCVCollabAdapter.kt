@@ -1,15 +1,14 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.oldexpandtext
 
 import android.content.Context
-import android.text.method.LinkMovementMethod
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.codemobile.rcvcollab.datatype.BaseDataType
-import com.codemobile.rcvcollab.datatype.CrazyType
-import com.codemobile.rcvcollab.holder.FixHolder
-import com.codemobile.rcvcollab.holder.StartWarHolder
+import com.codemobile.rcvcollab.R
+import com.codemobile.rcvcollab.oldexpandtext.datatype.BaseDataType
+import com.codemobile.rcvcollab.oldexpandtext.datatype.CrazyType
+import com.codemobile.rcvcollab.oldexpandtext.holder.FixHolder
+import com.codemobile.rcvcollab.oldexpandtext.holder.StartWarHolder
 
 
 class PeopleRecycleViewAdapter(val context: Context, val mDataArray: ArrayList<BaseDataType>) :

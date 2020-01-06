@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:text="------------------------"
         />
-    <com.codemobile.rcvcollab.TextMakeResize
+    <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
         android:id="@+id/txtResize"
         android:maxLines="2"
         android:layout_width="match_parent"

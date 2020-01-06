@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.newexpandtext
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

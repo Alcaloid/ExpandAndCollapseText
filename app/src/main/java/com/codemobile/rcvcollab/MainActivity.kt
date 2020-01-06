@@ -3,6 +3,8 @@ package com.codemobile.rcvcollab
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.codemobile.rcvcollab.newexpandtext.ExpandTextActivity
+import com.codemobile.rcvcollab.oldexpandtext.RCVCollabActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

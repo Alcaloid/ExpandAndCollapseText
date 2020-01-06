@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.oldexpandtext
 
 import android.content.Context
 import android.text.SpannableString

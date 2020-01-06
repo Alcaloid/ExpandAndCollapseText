@@ -1,16 +1,15 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.oldexpandtext
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.codemobile.rcvcollab.database.ApiInterface
-import com.codemobile.rcvcollab.datatype.BaseDataType
-import com.codemobile.rcvcollab.datatype.CrazyType
-import com.codemobile.rcvcollab.datatype.StarWarResponse
-import kotlinx.android.synthetic.main.activity_main.*
+import com.codemobile.rcvcollab.R
+import com.codemobile.rcvcollab.oldexpandtext.database.ApiInterface
+import com.codemobile.rcvcollab.oldexpandtext.datatype.BaseDataType
+import com.codemobile.rcvcollab.oldexpandtext.datatype.CrazyType
+import com.codemobile.rcvcollab.oldexpandtext.datatype.StarWarResponse
 import kotlinx.android.synthetic.main.activity_rcvcollab.*
-import kotlinx.android.synthetic.main.staticboxholder.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -133,7 +132,8 @@ class RCVCollabActivity : AppCompatActivity() {
                     "Android includes the transitions framework, which enables you to easily animate changes between two view hierarchies. The framework animates the views at runtime by changing some of their property values over time. The framework includes built-in animations for common effects and lets you create custom animations and transition lifecycle callbacks."
         )
         addCrazyData("Closing")
-        peopleAdapter = PeopleRecycleViewAdapter(this, testDataArray)
+        peopleAdapter =
+            PeopleRecycleViewAdapter(this, testDataArray)
         rcv_collab.let {
             it.adapter = peopleAdapter
             it.layoutManager = LinearLayoutManager(this)
@@ -141,7 +141,8 @@ class RCVCollabActivity : AppCompatActivity() {
     }
 
     private fun addCrazyData(string: String) {
-        val crazyData: CrazyType = CrazyType(string)
+        val crazyData: CrazyType =
+            CrazyType(string)
         testDataArray.add(crazyData)
     }
 

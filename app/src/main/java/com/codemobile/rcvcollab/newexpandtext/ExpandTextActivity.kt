@@ -1,11 +1,10 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.newexpandtext
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.codemobile.rcvcollab.datatype.ExpandText
+import com.codemobile.rcvcollab.R
 import kotlinx.android.synthetic.main.activity_expand_text.rcv_expand_text_state
-import kotlinx.android.synthetic.main.activity_rcvcollab.rcv_collab
 
 class ExpandTextActivity : AppCompatActivity() {
 

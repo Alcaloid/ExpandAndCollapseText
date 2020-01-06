@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.newexpandtext
 
 import android.content.Context
 import android.graphics.Color
@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.AppCompatTextView
+import com.codemobile.rcvcollab.R
 
 class ExpandAndCollapseText : AppCompatTextView {
 

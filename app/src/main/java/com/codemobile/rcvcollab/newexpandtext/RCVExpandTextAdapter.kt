@@ -1,10 +1,10 @@
-package com.codemobile.rcvcollab
+package com.codemobile.rcvcollab.newexpandtext
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.codemobile.rcvcollab.datatype.ExpandText
+import com.codemobile.rcvcollab.R
 
 class RCVExpandTextAdapter(val context: Context, val mDataArray: ArrayList<ExpandText>) :
     RecyclerView.Adapter<ExpandViewHolder>() {
