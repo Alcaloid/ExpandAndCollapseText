@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab.holder
+package com.codemobile.rcvcollab.oldexpandtext.holder
 
 import android.view.View
 import android.widget.TextView

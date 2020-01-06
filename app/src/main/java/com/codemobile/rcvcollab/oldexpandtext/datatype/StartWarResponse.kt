@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab.datatype
+package com.codemobile.rcvcollab.oldexpandtext.datatype
 
 
 data class StarWarResponse(

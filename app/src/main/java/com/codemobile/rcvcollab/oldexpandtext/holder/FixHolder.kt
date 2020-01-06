@@ -1,9 +1,8 @@
-package com.codemobile.rcvcollab.holder
+package com.codemobile.rcvcollab.oldexpandtext.holder
 
 import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.codemobile.rcvcollab.TextMakeResize
+import com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
 import kotlinx.android.synthetic.main.staticboxholder.view.*
 
 class FixHolder (view: View) : RecyclerView.ViewHolder(view) {

@@ -1,6 +1,6 @@
-package com.codemobile.rcvcollab.database
+package com.codemobile.rcvcollab.oldexpandtext.database
 
-import com.codemobile.rcvcollab.datatype.StarWarResponse
+import com.codemobile.rcvcollab.oldexpandtext.datatype.StarWarResponse
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,7 +26,8 @@ interface ApiInterface {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }
-            return retrofit!!.create(ApiInterface::class.java)
+            return retrofit!!.create(
+                ApiInterface::class.java)
         }
     }
 }

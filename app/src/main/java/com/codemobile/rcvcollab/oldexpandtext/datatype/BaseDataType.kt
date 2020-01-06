@@ -1,3 +1,3 @@
-package com.codemobile.rcvcollab.datatype
+package com.codemobile.rcvcollab.oldexpandtext.datatype
 
 interface BaseDataType
