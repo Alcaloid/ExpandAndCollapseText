@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextMakeResize">
+        <attr name="textResizeSpanTextMore" format="string"/>
+        <attr name="textResizeSpanTextLess" format="string" />
+        <attr name="textResizeSpanTextColor" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="etv_ellipsize_more_text" format="string" />
+        <attr name="etv_ellipsize_less_text" format="string" />
+    </declare-styleable>
+</resources>
