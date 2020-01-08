@@ -24,114 +24,23 @@
             android:layout_height="wrap_content"
             android:text="NewExpandText" />
 
+        <Button
+            android:id="@+id/btn_clone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Clone Expandtext" />
+
         <com.codemobile.rcvcollab.armisix.ExpandableTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:"
-            />
+Skillfully managing activities allows you to ensure that, for example:" />
 
         <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
             android:id="@+id/crazyTi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="3"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="4"
-            android:text="The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario,\n
-        you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app.\n
-        Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n
-        Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test.\nThe Espresso API encourages you to create concise and reliable UI tests based on user actions.\n
-        By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed." />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="3"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="4"
-            android:text="The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario,\n
-        you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app.\n
-        Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n
-        Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test.\nThe Espresso API encourages you to create concise and reliable UI tests based on user actions.\n
-        By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed." />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="3"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="4"
-            android:text="The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario,\n
-        you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app.\n
-        Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n
-        Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test.\nThe Espresso API encourages you to create concise and reliable UI tests based on user actions.\n
-        By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed." />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="3"
-            android:padding="100dp"
-            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
-Skillfully managing activities allows you to ensure that, for example:" />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="4"
-            android:text="The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario,\n
-        you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app.\n
-        Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n
-        Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test.\nThe Espresso API encourages you to create concise and reliable UI tests based on user actions.\n
-        By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed." />
-
-        <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
             android:padding="100dp"
             android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
 Skillfully managing activities allows you to ensure that, for example:" />

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.codemobile.rcvcollab.R
 import com.codemobile.rcvcollab.oldexpandtext.database.ApiInterface
 import com.codemobile.rcvcollab.oldexpandtext.datatype.BaseDataType
+import com.codemobile.rcvcollab.oldexpandtext.datatype.CloneType
 import com.codemobile.rcvcollab.oldexpandtext.datatype.CrazyType
 import com.codemobile.rcvcollab.oldexpandtext.datatype.StarWarResponse
 import kotlinx.android.synthetic.main.activity_rcvcollab.*
@@ -20,14 +21,95 @@ class RCVCollabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rcvcollab)
-
-        addFakeData()
+//        addFakeData()
+        addFakeCloneData()
         peopleAdapter =
             PeopleRecycleViewAdapter(this, testDataArray)
         rcv_collab.let {
             it.adapter = peopleAdapter
             it.layoutManager = LinearLayoutManager(this)
         }
+    }
+
+    private fun addFakeCloneData() {
+        val str1 =
+            "With this utility you generate a 16 character output based on your input of numbers and upper and lower case letters.  Random strings can be unique. Used in computing, a random string generator can also be called a random character string generator. This is an important tool if you want to generate a unique set of strings. The utility generates a sequence that lacks a pattern and is random."
+        val str2 =
+            "Throughout time, randomness was generated through mechanical devices such as dice, coin flips, and playing cards. A mechanical method of achieving randomness can be more time and resource consuming especially when a large number of randomized strings are needed as they could be in statistical applications.  Computational random string generators replace the traditional mechanical devices. "
+        val str3 = "Start\n2\n3\n4\n5\nEnd"
+        val str4 = "The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario, " +
+                "you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app. " +
+                "Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n" +
+                "Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test. " +
+                "The Espresso API encourages you to create concise and reliable UI tests based on user actions. " +
+                "By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed."
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+//        testDataArray.forEachIndexed { index, type ->
+//            val data: CloneType = type as CloneType
+//            Log.d("ExpandableTextView", "Data(${index})->${data.cloneText}")
+//        }
+//        testDataArray.forEach {
+//            val data = it as CloneType
+//            Log.d("ExpandableTextView", "Data->${data.cloneText}")
+//        }
+    }
+
+    private fun addCloneData(string: String) {
+        val cloneData: CloneType =
+            CloneType(string)
+        testDataArray.add(cloneData)
+    }
+
+    private fun addCrazyData(string: String) {
+        val crazyData: CrazyType =
+            CrazyType(string)
+        testDataArray.add(crazyData)
+    }
+
+    private fun feedPeople(page: String) {
+        val callPeople = ApiInterface.getClient().getAllPeople(page)
+        //check request
+        Log.d("SCB_Network", callPeople.request().url().toString())
+        callPeople.enqueue(object : Callback<StarWarResponse> {
+            override fun onFailure(call: Call<StarWarResponse>, t: Throwable) {
+                Log.d("SCB_Network_Error", t.message.toString())
+            }
+
+            override fun onResponse(
+                call: Call<StarWarResponse>,
+                response: Response<StarWarResponse>
+            ) {
+                Log.d("SCB_Network", response.body().toString())
+                if (response.isSuccessful) {
+                    testDataArray.add(response.body()!!)
+                    addCrazyData("EndFeed")
+                    peopleAdapter?.notifyDataSetChanged()
+                }
+            }
+
+        })
     }
 
     private fun addFakeData() {
@@ -142,35 +224,5 @@ class RCVCollabActivity : AppCompatActivity() {
                     "Android includes the transitions framework, which enables you to easily animate changes between two view hierarchies. The framework animates the views at runtime by changing some of their property values over time. The framework includes built-in animations for common effects and lets you create custom animations and transition lifecycle callbacks."
         )
         addCrazyData("Closing")
-    }
-
-    private fun addCrazyData(string: String) {
-        val crazyData: CrazyType =
-            CrazyType(string)
-        testDataArray.add(crazyData)
-    }
-
-    private fun feedPeople(page: String) {
-        val callPeople = ApiInterface.getClient().getAllPeople(page)
-        //check request
-        Log.d("SCB_Network", callPeople.request().url().toString())
-        callPeople.enqueue(object : Callback<StarWarResponse> {
-            override fun onFailure(call: Call<StarWarResponse>, t: Throwable) {
-                Log.d("SCB_Network_Error", t.message.toString())
-            }
-
-            override fun onResponse(
-                call: Call<StarWarResponse>,
-                response: Response<StarWarResponse>
-            ) {
-                Log.d("SCB_Network", response.body().toString())
-                if (response.isSuccessful) {
-                    testDataArray.add(response.body()!!)
-                    addCrazyData("EndFeed")
-                    peopleAdapter?.notifyDataSetChanged()
-                }
-            }
-
-        })
     }
 }
