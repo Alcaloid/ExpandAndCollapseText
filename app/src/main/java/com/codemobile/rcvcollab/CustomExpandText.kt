@@ -1,4 +1,4 @@
-package com.codemobile.rcvcollab.armisix
+package com.codemobile.rcvcollab
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,11 +7,9 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.AttributeSet
-import android.util.Log
 import androidx.appcompat.widget.AppCompatTextView
-import com.codemobile.rcvcollab.R
 
-class CloneArmisixExpandText @JvmOverloads constructor(
+class CustomExpandText @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : AppCompatTextView(context, attrs) {
@@ -19,27 +17,28 @@ class CloneArmisixExpandText @JvmOverloads constructor(
     companion object {
         private const val DEFAULT_IS_EXPAND = false
         private const val DEFAULT_MAX_LINE = 3
+        private const val DEFAULT_EXPAND_TEXT = "... See More"
+        private const val DEFAULT_EXPAND_Color = Color.BLUE
     }
 
-    var onStateChangeListener: (CloneArmisixExpandText.(oldState2: Boolean, newState2: Boolean) -> Unit)? =
+    var onStateChangeListener: (CustomExpandText.(oldState2: Boolean, newState2: Boolean) -> Unit)? =
         null
 
-    var isExpand = DEFAULT_IS_EXPAND
+    private var isExpand = DEFAULT_IS_EXPAND
         set(value) {
             if (field != value) {
-                Log.d("ExpandableTextView", "$field -> $value")
                 onStateChangeListener?.let { it(field, value) }
                 field = value
             }
             updateText()
         }
     private var expandMaxLine: Int = DEFAULT_MAX_LINE
+    private var expandMoreText: String = DEFAULT_EXPAND_TEXT
+    private var expandMoreColor: Int = DEFAULT_EXPAND_Color
     private var originalText: CharSequence? = null
 
     init {
         initAttribute(context, attrs)
-//        setExpandableText(text)
-//        setMaxLine(DEFAULT_MAX_LINE)
         setOnClickListener {
             isExpand = !isExpand
             updateText()
@@ -48,6 +47,14 @@ class CloneArmisixExpandText @JvmOverloads constructor(
 
     fun setMaxLine(limitLine: Int) {
         expandMaxLine = limitLine
+    }
+
+    fun setExpandMoreText(text: String) {
+        expandMoreText = text
+    }
+
+    fun setExpandMoreColor(color: Int) {
+        expandMoreColor = color
     }
 
     fun setExpandableText(text: CharSequence?) {
@@ -59,10 +66,10 @@ class CloneArmisixExpandText @JvmOverloads constructor(
 
     private fun updateText() {
         if (isExpand) {
-            maxLines = Int.MAX_VALUE
+            maxLines = Int.MAX_VALUE //set to control when user scroll
             makeTextViewResizable(Int.MAX_VALUE)
         } else {
-            maxLines = expandMaxLine
+            maxLines = expandMaxLine //set to control when user scroll
             makeTextViewResizable(expandMaxLine)
         }
     }
@@ -71,7 +78,7 @@ class CloneArmisixExpandText @JvmOverloads constructor(
         val textView = this
         when {
             textView.lineCount >= maxLine -> {
-                val expandText = "... SeeMore"
+                val expandText = expandMoreText
                 val lineEndIndex = textView.layout.getLineEnd(maxLine - 1)
                 val wordDefault = if (lineEndIndex <= expandText.length) {
                     textView.text.subSequence(0, lineEndIndex - 1).toString()
@@ -105,6 +112,13 @@ class CloneArmisixExpandText @JvmOverloads constructor(
                 it.getInt(R.styleable.ExpandableTextView_expandableMaxLine, DEFAULT_MAX_LINE)
             isExpand =
                 it.getBoolean(R.styleable.ExpandableTextView_expandableIsExpand, DEFAULT_IS_EXPAND)
+            expandMoreText = it.getString(
+                R.styleable.ExpandableTextView_expandableText
+            ) ?: DEFAULT_EXPAND_TEXT
+            expandMoreColor = it.getInt(
+                R.styleable.ExpandableTextView_expandableColorText,
+                DEFAULT_EXPAND_Color
+            )
             it.recycle()
         }
     }

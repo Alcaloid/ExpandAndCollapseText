@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="TextMakeResize">
-        <attr name="textResizeSpanTextMore" format="string"/>
+        <attr name="textResizeSpanTextMore" format="string" />
         <attr name="textResizeSpanTextLess" format="string" />
         <attr name="textResizeSpanTextColor" format="integer" />
     </declare-styleable>
@@ -11,6 +11,8 @@
         <attr name="etv_ellipsize_max_line_text" format="integer" />
         <attr name="expandableMaxLine" format="integer" />
         <attr name="expandableIsExpand" format="integer" />
+        <attr name="expandableColorText" format="integer" />
+        <attr name="expandableText" format="string" />
 
     </declare-styleable>
 </resources>

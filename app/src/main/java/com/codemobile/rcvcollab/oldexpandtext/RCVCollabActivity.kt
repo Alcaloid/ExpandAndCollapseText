@@ -10,6 +10,7 @@ import com.codemobile.rcvcollab.oldexpandtext.datatype.BaseDataType
 import com.codemobile.rcvcollab.oldexpandtext.datatype.CloneType
 import com.codemobile.rcvcollab.oldexpandtext.datatype.CrazyType
 import com.codemobile.rcvcollab.oldexpandtext.datatype.StarWarResponse
+import com.codemobile.rcvcollab.oldexpandtext.holder.CloneARMISIXHolder
 import kotlinx.android.synthetic.main.activity_rcvcollab.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,6 +29,7 @@ class RCVCollabActivity : AppCompatActivity() {
         rcv_collab.let {
             it.adapter = peopleAdapter
             it.layoutManager = LinearLayoutManager(this)
+//            it.recycledViewPool.setMaxRecycledViews(0,22)
         }
     }
 
@@ -37,15 +39,21 @@ class RCVCollabActivity : AppCompatActivity() {
         val str2 =
             "Throughout time, randomness was generated through mechanical devices such as dice, coin flips, and playing cards. A mechanical method of achieving randomness can be more time and resource consuming especially when a large number of randomized strings are needed as they could be in statistical applications.  Computational random string generators replace the traditional mechanical devices. "
         val str3 = "Start\n2\n3\n4\n5\nEnd"
-        val str4 = "The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario, " +
-                "you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app. " +
-                "Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n" +
-                "Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test. " +
-                "The Espresso API encourages you to create concise and reliable UI tests based on user actions. " +
-                "By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed."
+        val str4 =
+            "The Espresso Test Recorder tool lets you create UI tests for your app without writing any test code. By recording a test scenario, " +
+                    "you can record your interactions with a device and add assertions to verify UI elements in particular snapshots of your app. " +
+                    "Espresso Test Recorder then takes the saved recording and automatically generates a corresponding UI test that you can run to test your app.\n" +
+                    "Espresso Test Recorder writes tests based on the Espresso Testing framework, an API in AndroidX Test. " +
+                    "The Espresso API encourages you to create concise and reliable UI tests based on user actions. " +
+                    "By stating expectations, interactions, and assertions without directly accessing the underlying app’s activities and views, this structure prevents test flakiness and optimizes test run speed."
+        val str5 = "Is A Long Text But Short Line"
+        val str6 = "Short"
         addCloneData(str1)
         addCloneData(str2)
         addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str5)
+        addCloneData(str6)
         addCloneData(str1)
         addCloneData(str2)
         addCloneData(str3)
@@ -66,14 +74,33 @@ class RCVCollabActivity : AppCompatActivity() {
         addCloneData(str2)
         addCloneData(str3)
         addCloneData(str4)
-//        testDataArray.forEachIndexed { index, type ->
-//            val data: CloneType = type as CloneType
-//            Log.d("ExpandableTextView", "Data(${index})->${data.cloneText}")
-//        }
-//        testDataArray.forEach {
-//            val data = it as CloneType
-//            Log.d("ExpandableTextView", "Data->${data.cloneText}")
-//        }
+
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str5)
+        addCloneData(str6)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
+        addCloneData(str1)
+        addCloneData(str2)
+        addCloneData(str3)
+        addCloneData(str4)
     }
 
     private fun addCloneData(string: String) {

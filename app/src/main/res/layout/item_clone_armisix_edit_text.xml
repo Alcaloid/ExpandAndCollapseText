@@ -7,7 +7,8 @@
     <com.codemobile.rcvcollab.armisix.CloneArmisixExpandText
         android:id="@+id/txt_clone_ARMISIX_expand_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
 
     <View
         android:layout_width="match_parent"
