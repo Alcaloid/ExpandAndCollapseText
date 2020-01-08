@@ -1,6 +1,7 @@
 package com.codemobile.rcvcollab.oldexpandtext
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -63,19 +64,12 @@ class PeopleRecycleViewAdapter(val context: Context, val mDataArray: ArrayList<B
             1 -> {
                 val viewHolder = holder as FixHolder
                 val fixArray = mDataArray[position] as CrazyType
-                viewHolder.textData.setup()
-                viewHolder.textData.setTextResize(fixArray.crazyText)
-                viewHolder.textData.setReadMore(false)
-                viewHolder.textData.setCustomMaxLine(5)
+                holder.setIsRecyclable(false)
+                viewHolder.textData.setExpandableText(fixArray.crazyText)
             }
             else -> {
                 //Empty
             }
         }
-    }
-
-    override fun onViewRecycled(holder: RecyclerView.ViewHolder) {
-        super.onViewRecycled(holder)
-
     }
 }

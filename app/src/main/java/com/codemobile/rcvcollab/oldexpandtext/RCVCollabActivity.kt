@@ -21,6 +21,16 @@ class RCVCollabActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rcvcollab)
 
+        addFakeData()
+        peopleAdapter =
+            PeopleRecycleViewAdapter(this, testDataArray)
+        rcv_collab.let {
+            it.adapter = peopleAdapter
+            it.layoutManager = LinearLayoutManager(this)
+        }
+    }
+
+    private fun addFakeData() {
         addCrazyData("Opening")
         addCrazyData(
             "1Line\n" +
@@ -132,12 +142,6 @@ class RCVCollabActivity : AppCompatActivity() {
                     "Android includes the transitions framework, which enables you to easily animate changes between two view hierarchies. The framework animates the views at runtime by changing some of their property values over time. The framework includes built-in animations for common effects and lets you create custom animations and transition lifecycle callbacks."
         )
         addCrazyData("Closing")
-        peopleAdapter =
-            PeopleRecycleViewAdapter(this, testDataArray)
-        rcv_collab.let {
-            it.adapter = peopleAdapter
-            it.layoutManager = LinearLayoutManager(this)
-        }
     }
 
     private fun addCrazyData(string: String) {

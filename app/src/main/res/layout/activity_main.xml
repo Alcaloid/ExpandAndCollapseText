@@ -24,6 +24,13 @@
             android:layout_height="wrap_content"
             android:text="NewExpandText" />
 
+        <com.codemobile.rcvcollab.armisix.ExpandableTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activities are one of the fundamental building blocks of apps on the Android platform. They serve as the entry point for a user's interaction with an app, and are also central to how a user navigates within an app (as with the Back button) or between apps (as with the Recents button).
+Skillfully managing activities allows you to ensure that, for example:"
+            />
+
         <com.codemobile.rcvcollab.oldexpandtext.TextMakeResize
             android:id="@+id/crazyTi"
             android:layout_width="match_parent"

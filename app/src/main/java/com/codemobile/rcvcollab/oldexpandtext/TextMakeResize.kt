@@ -21,14 +21,11 @@ class TextMakeResize(context: Context, attrs: AttributeSet) : TextView(context, 
     private var limitLine = maxLines
 
     init {
-//        setBasicData()
         setup()
     }
 
     private fun setBasicData() {
-        //เซ็ต attr ไงอะครับ ;w;
-//        spanTextColor = a.getColor(R.attr.textResizeSpanTextColor,0)
-//        spanTextLess = a.getString(R.styleable.TextMakeResize_textResizeSpanTextLess)
+
     }
 
     fun setup() {
@@ -46,6 +43,7 @@ class TextMakeResize(context: Context, attrs: AttributeSet) : TextView(context, 
             }
         }
     }
+
 
     private fun resizeTextOverLimit() {
         val lineEndIndex = layout.getLineEnd(limitLine - 1)

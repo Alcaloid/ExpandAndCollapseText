@@ -1,6 +1,7 @@
 package com.codemobile.rcvcollab.newexpandtext
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -25,9 +26,16 @@ class RCVExpandTextAdapter(val context: Context, val mDataArray: ArrayList<Expan
     }
 
     override fun onBindViewHolder(holder: ExpandViewHolder, position: Int) {
-        holder.expText.text = mDataArray[position].dataString
+        Log.d("ExpandableTextView", "Position${position}")
+//        holder.setIsRecyclable(false)
+        holder.expText.text = "position is ${position}\n" + mDataArray[position].dataString
         holder.bindPosition(position, mDataArray[position].dataState) { state, postion ->
             mDataArray[position].dataState = state
         }
+    }
+
+    override fun onViewRecycled(holder: ExpandViewHolder) {
+        super.onViewRecycled(holder)
+        Log.d("Recycler", "onRecycled: ${holder.layoutPosition}")
     }
 }

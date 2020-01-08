@@ -8,5 +8,9 @@
     <declare-styleable name="ExpandableTextView">
         <attr name="etv_ellipsize_more_text" format="string" />
         <attr name="etv_ellipsize_less_text" format="string" />
+        <attr name="etv_ellipsize_max_line_text" format="integer" />
+        <attr name="expandableMaxLine" format="integer" />
+        <attr name="expandableIsExpand" format="integer" />
+
     </declare-styleable>
 </resources>
